@@ -168,16 +168,16 @@ class HybridBCEDiceLoss(nn.Module):
 
 ##Train
 model = UNet()
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 criterion = HybridBCEDiceLoss(smooth=0.3) # F1Loss() #nn.BCELoss()
-epochs = 1000
+epochs = 300
 
 
 
 transform = transforms.Compose([
-    transforms.RandomHorizontalFlip(),
-    transforms.RandomVerticalFlip(),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+    #transforms.RandomHorizontalFlip(),
+    #transforms.RandomVerticalFlip(),
+    #transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5], std=[0.5])
 ])
