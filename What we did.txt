@@ -1,0 +1,10 @@
+Unet with BCE Loss
+Made custom F1 loss (0.8 F1 score)
+	F1 Not differentiable, therefore we used 2⋅precision⋅recall​ / precision+recall. 
+		Precision = TP / (TP + FP)
+		Recall = TP / (TP + FN)
+Added transformations (flips / rotations / colorchange) (0.5 F1 score) Why ? It's not logical
+Hybrid loss (0.5 F1 score)
+DICE loss (bad) (0.5 F1 score)
+Hybrid Dice & BCE (better). (0.75 F1 Score)
+​
